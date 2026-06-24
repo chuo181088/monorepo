@@ -1,41 +1,135 @@
+```
 # Dependencies
 node_modules/
-.pnpm-store/
 
 # Build outputs
 dist/
 build/
+target/
+
+# TypeScript
+*.tsbuildinfo
 .next/
+.nuxt/
+.un~lock
 
 # Environment variables
 .env
 .env.local
-.env.*.local
+.env.*
 
-# Logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
-
-# IDE
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
-# OS
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
 .DS_Store
 Thumbs.db
 
-# Generated files
-routeTree.gen.ts
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
 
-# Backup files
-*.backup
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
 
-# Testing
-coverage/
+# C/C++
+*.o
+*.a
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
 
-# Misc
-*.tsbuildinfo
+# Rust
+Cargo.lock
+
+# Ruby
+*.gem
+*.rbc
+extconf.rb
+Gemfile.lock
+vendor/
+
+# Node.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/
+jspm_packages/
+typings/
+
+# Bower
+bower_components/
+
+# Grunt
+.grunt
+grunt-cache.json
+
+# Composer
+vendor/
+
+# Web
+.sass-cache
+connect.lock
+.yarn-integrity
+.yarn-metadata.json
+node_modules/
+jspm_packages/
+typings/
+.npm
+.npmrc
+
+# Database
+*.sqlite
+*.sqlite3
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+```
