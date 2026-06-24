@@ -1,0 +1,11 @@
+export { Hero } from "./Hero";
+export { About } from "./About";
+export { Services } from "./Services";
+export { Gallery } from "./Gallery";
+export { Testimonials } from "./Testimonials";
+export { FinalCTA } from "./FinalCTA";
+export { Contact } from "./Contact";
+export { AgencyContactBanner } from "./AgencyContactBanner";
+export { Footer } from "./Footer";
+export { FloatingWhatsApp } from "./FloatingWhatsApp";
+export { Nav } from "./Nav";

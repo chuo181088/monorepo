@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Fondo oscuro premium con bordes redondeados (estilo iOS) -->
+  <rect width="128" height="128" rx="32" fill="#18181b"/>
+  
+  <!-- Letra K elegante y geométrica -->
+  <path d="M40 32 L40 96 L56 96 L56 68 L84 96 L104 96 L68 62 L100 32 L80 32 L56 58 L56 32 Z" fill="#d4af37"/>
+  
+  <!-- Pequeño brillo (sparkle) dorado para el toque de belleza -->
+  <path d="M96 24 L98 30 L104 32 L98 34 L96 40 L94 34 L88 32 L94 30 Z" fill="#fbbf24"/>
+</svg>

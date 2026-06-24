@@ -1,0 +1,265 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  
+  /* Colores semánticos */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  
+  /* Colores de gráficos */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* 💎 Colores premium de K-Pelo Center */
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-deep: var(--gold-deep);
+  
+  /* Fuentes */
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  
+  /* Animación shimmer */
+  --keyframes-shimmer {
+    100% { transform: translateX(100%); }
+  }
+  --animation-shimmer: shimmer 2.5s infinite ease-in-out;
+}
+
+:root {
+  --radius: 0.25rem;
+  
+  /* K-Pelo Center: Black, White, Gold luxury palette */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.12 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.12 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.12 0 0);
+  --primary: oklch(0.12 0 0);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.96 0.005 80);
+  --secondary-foreground: oklch(0.12 0 0);
+  --muted: oklch(0.96 0.005 80);
+  --muted-foreground: oklch(0.45 0.01 60);
+  --accent: oklch(0.75 0.13 80);
+  --accent-foreground: oklch(0.12 0 0);
+  --gold: oklch(0.75 0.13 80);
+  --gold-soft: oklch(0.85 0.08 85);
+  --gold-deep: oklch(0.6 0.14 70);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.9 0.01 60);
+  --input: oklch(0.9 0.01 60);
+  --ring: oklch(0.75 0.13 80);
+  --chart-1: oklch(0.75 0.13 80);
+  --chart-2: oklch(0.6 0.14 70);
+  --chart-3: oklch(0.12 0 0);
+  --chart-4: oklch(0.85 0.08 85);
+  --chart-5: oklch(0.45 0.01 60);
+  --sidebar: oklch(0.12 0 0);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.75 0.13 80);
+  --sidebar-primary-foreground: oklch(0.12 0 0);
+  --sidebar-accent: oklch(0.2 0 0);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.2 0 0);
+  --sidebar-ring: oklch(0.75 0.13 80);
+  
+  /* Gradientes y sombras */
+  --gradient-gold: linear-gradient(135deg, oklch(0.85 0.08 85), oklch(0.75 0.13 80), oklch(0.6 0.14 70));
+  --gradient-dark: linear-gradient(180deg, oklch(0.12 0 0) 0%, oklch(0.18 0.005 60) 100%);
+  --shadow-luxe: 0 20px 60px -20px oklch(0.12 0 0 / 0.25);
+  --shadow-gold: 0 10px 40px -10px oklch(0.75 0.13 80 / 0.4);
+  
+  /* Fuentes */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+.dark {
+  --background: oklch(0.15 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.2 0 0);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.95 0 0);
+  --primary-foreground: oklch(0.15 0 0);
+  --secondary: oklch(0.25 0 0);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.25 0 0);
+  --muted-foreground: oklch(0.7 0 0);
+  --accent: oklch(0.75 0.13 80);
+  --accent-foreground: oklch(0.95 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0 0);
+  --border: oklch(0.3 0 0);
+  --input: oklch(0.3 0 0);
+  --ring: oklch(0.75 0.13 80);
+  --chart-1: oklch(0.75 0.13 80);
+  --chart-2: oklch(0.6 0.14 70);
+  --chart-3: oklch(0.85 0.08 85);
+  --chart-4: oklch(0.45 0.01 60);
+  --chart-5: oklch(0.3 0 0);
+  --sidebar: oklch(0.2 0 0);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: oklch(0.75 0.13 80);
+  --sidebar-primary-foreground: oklch(0.15 0 0);
+  --sidebar-accent: oklch(0.25 0 0);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(0.3 0 0);
+  --sidebar-ring: oklch(0.75 0.13 80);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* 👈 Navbar fijo no tapa el contenido */
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-gold { color: var(--gold); }
+  .text-gold-deep { color: var(--gold-deep); }
+  .text-gold-soft { color: var(--gold-soft); }
+  .bg-gold { background-color: var(--gold); }
+  .border-gold { border-color: var(--gold); }
+  .bg-gradient-gold { background: var(--gradient-gold); }
+  .bg-gradient-dark { background: var(--gradient-dark); }
+  .shadow-luxe { box-shadow: var(--shadow-luxe); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .font-display { font-family: var(--font-display); }
+}
+
+/* Accesibilidad: Respetar preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   ANIMACIONES PERSONALIZADAS K-PELO CENTER
+   ═══════════════════════════════════════════ */
+
+/* 1. Botón de precios (Services) */
+@keyframes mobileBorderPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  70% { transform: scale(1.08, 1.2); opacity: 0; }
+  100% { transform: scale(1); opacity: 0; }
+}
+.pulso-movil {
+  position: absolute; inset: 0; border: 1px solid var(--gold); border-radius: 2px; pointer-events: none; animation: mobileBorderPulse 2s infinite ease-out;
+}
+
+/* 2. Estrellas de Google (Testimonials) */
+@keyframes starWave {
+  0%, 100% { opacity: 0.3; filter: drop-shadow(0 0 2px rgba(212,175,55,0.1)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 10px rgba(212,175,55,0.7)); }
+}
+.estrella-ola { animation: starWave 1.5s infinite ease-in-out; }
+
+/* 3. Borde giratorio (Final CTA) */
+@keyframes borderRotate { 100% { transform: rotate(360deg); } }
+.linea-borde-activa {
+  position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: conic-gradient(from 0deg, transparent 60%, #ffffff 85%, var(--gold) 95%, transparent 100%);
+  animation: borderRotate 3s infinite linear;
+}
+
+/* 4. Aura del WhatsApp (FloatingWhatsApp) */
+@keyframes auraSutil {
+  0% { transform: scale(1); opacity: 0.4; filter: blur(1px); }
+  50% { transform: scale(1.15); opacity: 0.25; filter: blur(3px); }
+  100% { transform: scale(1.25); opacity: 0; filter: blur(5px); }
+}
+.aura-pulso { position: absolute; inset: 0; background-color: #d4af37; border-radius: 9999px; pointer-events: none; z-index: 0; }
+.onda-1 { animation: auraSutil 3s infinite ease-out; }
+.onda-2 { animation: auraSutil 3s infinite ease-out 1.5s; }
+
+@keyframes goldShine {
+  0% { left: -130%; }   /* Empieza oculto a la izquierda */
+  25% { left: 130%; }   /* Cruza hacia la derecha */
+  50% { left: 130%; }   /* Pausa a la derecha */
+  75% { left: -130%; }  /* Regresa hacia la izquierda */
+  100% { left: -130%; } /* Pausa a la izquierda antes de reiniciar */
+}
+
+.animate-shine-loop {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%; /* O el ancho que prefieras para el destello */
+  animation: goldShine 4s ease-in-out infinite;
+}

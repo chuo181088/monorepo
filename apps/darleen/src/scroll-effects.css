@@ -1,0 +1,162 @@
+/* ==========================================================================
+   LUCIAN CREATIVE - MOTOR DE ANIMACIÓN PREMIUM REPOSITORIO GLOBAL
+   ========================================================================== */
+
+/* --- 0. SEGURO ABSOLUTO ANTI-SCROLL LATERAL --- */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* --- 1. SECCIÓN SERVICIOS: INDEPENDIENTE PARA CELULARES --- */
+.servicio-card {
+  opacity: 0;
+  transform: translateY(15px) scale(0.97);
+  transition: opacity 1.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.servicio-card.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* --- 2. MOTOR DE CASCADA (USADO EN LISTAS Y BENEFICIOS) --- */
+.scroll-cascade > * {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 2s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.is-visible.scroll-cascade > * {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+
+/* --- 3. SECCIÓN SOBRE NOSOTROS: ENFOQUE CINEMÁTICO DUAL --- */
+/* A. La Foto de Darleen Curiel */
+.about-foto {
+  opacity: 0;
+  filter: blur(10px);
+  transform: scale(0.96);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 1s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.about-foto.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+/* B. El Bloque de Texto descriptivo */
+.about-contenido {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.about-contenido.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* --- 4. SECCIÓN GALERÍA: EFECTO POP SEÑORIAL INDEPENDIENTE --- */
+.foto-pop {
+  opacity: 0;
+  transform: scale(0.92) translateY(10px);
+  transition: opacity 2.5s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 2.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.foto-pop.is-visible {
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+}
+
+
+/* --- 5. SECCIÓN TESTIMONIOS: EFECTO PROFUNDIDAD 3D (CERO X) --- */
+.testimonio-izquierda,
+.testimonio-derecha {
+  opacity: 0;
+  filter: blur(8px);
+  transform: scale(0.90) translateY(20px);
+  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), 
+              filter 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.testimonio-izquierda.is-visible,
+.testimonio-derecha.is-visible {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: scale(1) translateY(0) !important;
+}
+
+/* ==========================================================================
+   SECCIÓN BOOKING: CONTROL DE RITMO INDEPENDIENTE DE CONTACTO
+   ========================================================================== */
+
+/* Bloque de información (Texto e información de Santiago) */
+.booking-info {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.booking-info.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* El Formulario de Reserva: Zoom expansivo y desenfoque (Blindado contra scroll lateral) */
+.booking-form {
+  opacity: 0;
+  filter: blur(8px);
+  transform: scale(0.93) translateY(15px);
+  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+              filter 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.booking-form.is-visible {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: scale(1) translateY(0) !important;
+}
+
+/* ==========================================================================
+   SECCIÓN HERO & STATS: MOTOR DE ENTRADA INMEDIATA PREMIUM
+   ========================================================================== */
+
+/* Entrada del Texto del Hero: Sube flotando suavemente al cargar la pestaña */
+.hero-texto-fade {
+  animation: heroTextoReveal 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Entrada de la Foto del Hero: Se enfoca y escala desde el fondo al cargar */
+.hero-foto-blur {
+  animation: heroFotoReveal 1.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes heroTextoReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFotoReveal {
+  0% {
+    opacity: 0;
+    filter: blur(15px);
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
