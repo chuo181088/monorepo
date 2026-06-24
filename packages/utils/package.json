@@ -1,24 +1,12 @@
 {
-  "name": "@salones/utils",
-  "version": "1.0.0",
+  "name": "@repo/utils",
+  "version": "0.0.1",
   "private": true,
-  "type": "module",
-  "description": "Utilidades y funciones helper compartidas",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./cn": "./src/cn.ts"
+    ".": "./src/index.ts"
   },
   "scripts": {
     "lint": "eslint src/",
     "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.6.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.8.3"
   }
 }

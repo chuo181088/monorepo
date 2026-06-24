@@ -1,8 +1,10 @@
 {
-  "name": "@salones/config",
-  "version": "1.0.0",
+  "name": "@repo/config",
+  "version": "0.0.1",
   "private": true,
-  "description": "Configuraciones compartidas (TypeScript, ESLint, Vite)",
-  "main": "./index.js",
-  "types": "./index.d.ts"
+  "exports": {
+    "./tsconfig": "./tsconfig.json",
+    "./eslint": "./eslint.config.js",
+    "./vite": "./vite.config.js"
+  }
 }

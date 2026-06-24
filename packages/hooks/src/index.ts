@@ -1,4 +1,6 @@
-// Hooks personalizados compartidos
-// Agrega aquí los hooks que se utilicen en múltiples apps
+// @repo/hooks - Hooks personalizados compartidos
+// Exporta hooks reutilizables entre aplicaciones
 
-export {};
+export { useAuth } from './use-auth';
+export { useLocalStorage } from './use-local-storage';
+export { useDebounce } from './use-debounce';

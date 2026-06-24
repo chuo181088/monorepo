@@ -1,6 +1,6 @@
-// Componentes compartidos con lógica de negocio
-export * from "./Counter"
-export * from "./ScrollAnimate"
-export * from "./HeroAnimate"
-export * from "./FloatingWhatsApp"
-export * from "./ContactBanner"
+// @repo/components - Componentes con lógica compartida
+// Exporta componentes que combinan UI con lógica de negocio reusable
+
+export { LoginForm } from './login-form';
+export { DashboardHeader } from './dashboard-header';
+export { Sidebar } from './sidebar';
